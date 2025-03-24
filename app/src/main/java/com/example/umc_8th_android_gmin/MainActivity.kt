@@ -1,47 +1,36 @@
 package com.example.umc_8th_android_gmin
 
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.umc_8th_android_gmin.ui.theme.UMC_8th_Android_gminTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContent {
-            UMC_8th_Android_gminTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+        setContentView(R.layout.activity_main)
+
+        val image_happy = findViewById<ImageView>(R.id.image_happy)
+        image_happy.setOnClickListener {
+            Toast.makeText(this, "웃음 사진 선택", Toast.LENGTH_LONG).show()
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    UMC_8th_Android_gminTheme {
-        Greeting("Android")
+        val image_excite = findViewById<ImageView>(R.id.image_excite)
+        image_excite.setOnClickListener {
+            Toast.makeText(this, "흥분 사진 선택", Toast.LENGTH_LONG).show()
+        }
+        val image_soso = findViewById<ImageView>(R.id.image_soso)
+        image_soso.setOnClickListener {
+            Toast.makeText(this, "보통 사진 선택", Toast.LENGTH_LONG).show()
+        }
+        val image_anxious = findViewById<ImageView>(R.id.image_anxious)
+        image_anxious.setOnClickListener {
+            Toast.makeText(this, "불안 사진 선택", Toast.LENGTH_LONG).show()
+        }
+        val image_angry = findViewById<ImageView>(R.id.image_angry)
+        image_angry.setOnClickListener {
+            Toast.makeText(this, "분노 사진 선택", Toast.LENGTH_LONG).show()
+        }
     }
 }

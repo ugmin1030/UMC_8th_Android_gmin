@@ -38,58 +38,66 @@
         android:id="@+id/image_happy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="254dp"
+        android:layout_marginTop="23dp"
         android:layout_marginBottom="56dp"
         android:src="@drawable/happy"
         app:layout_constraintBottom_toTopOf="@+id/image_excite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/text_end" />
 
     <ImageView
         android:id="@+id/image_excite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
         android:layout_marginBottom="56dp"
         android:src="@drawable/excite"
         app:layout_constraintBottom_toTopOf="@+id/image_soso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_happy" />
 
     <ImageView
         android:id="@+id/image_anxious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
         android:layout_marginBottom="56dp"
         android:src="@drawable/soso"
         app:layout_constraintBottom_toTopOf="@+id/image_angry"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_soso" />
 
     <ImageView
         android:id="@+id/image_soso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
         android:layout_marginBottom="56dp"
         android:src="@drawable/anxious"
         app:layout_constraintBottom_toTopOf="@+id/image_anxious"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_excite" />
 
     <ImageView
         android:id="@+id/image_angry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
         android:layout_marginBottom="188dp"
         android:src="@drawable/angry"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_anxious" />
 
     <TextView
         android:id="@+id/text_title"
@@ -180,4 +188,5 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_angry" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
